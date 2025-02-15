@@ -138,11 +138,11 @@
 		function tList(date){
 			$('.card').hide();
 			$('#'+date).show();
-			$('.card').style("z-index:auto;");
+			$('.card').style().css("z-index", "auto");
 		}
 
 		function btnCl(){
-			$('.card').style("z-index:-1;");
+			$('.card').style().css("z-index", -1);
 		}
 	</script>
 </body>
