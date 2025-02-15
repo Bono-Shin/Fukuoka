@@ -43,15 +43,11 @@
     			align-content: center;
     			text-align : center;
     		}
-
-    		.card{
-    			z-index: -1;
-    		}
     	</style>
 </head>
 <body>
 	<div class="dropup-center dropup mainBtn">
-	  <button class="btn btn-secondary dropdown-toggle btnTitle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+	  <button class="btn btn-secondary dropdown-toggle btnTitle" type="button" data-bs-toggle="dropdown" aria-expanded="false" onclick="btnCl();">
 	    날짜 선택
 	  </button>
 	  <ul class="dropdown-menu" style="width: 100%;">
@@ -142,6 +138,11 @@
 		function tList(date){
 			$('.card').hide();
 			$('#'+date).show();
+			$('.card').style("z-index:auto;");
+		}
+
+		function btnCl(){
+			$('.card').style("z-index:-1;");
 		}
 	</script>
 </body>
